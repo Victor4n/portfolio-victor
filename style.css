@@ -164,6 +164,7 @@ section{
 	font-family:  sans-serif;
     background: -webkit-linear-gradient(right, #3498db, #aedfff, #3498db, #868686);
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
   }
   .container form{
