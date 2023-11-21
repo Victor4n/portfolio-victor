@@ -53,3 +53,5 @@ var tagcloud = TagCloud('.content', myTag, {
     direction: 135,
     keep: true
 });
+
+//post de envio
