@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor OR - Portafolio</title>
+    <script src="https://kit.fontawesome.com/069934d3cc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Montserrat:wght@500;600;700&family=Poppins:wght@200;300;400;500;600;700&family=Russo+One&family=Young+Serif&display=swap" rel="stylesheet">
@@ -14,13 +16,6 @@
     <header id="headerSticky">
         <h1 class="V" id="headerTitle">V<span class="typed"></span></h1>
     </header>
-
-    <nav>
-        <a href="#about">Sobre Mí</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#contact">Contacto</a>
-    </nav>
 
     <section id="about">
         
@@ -122,6 +117,21 @@
 
         </div>
     </section>
+    <div class="wrapper">
+        <nav>
+            <input type="radio" name="tab" id="home">
+            <input type="radio" name="tab" id="Proyectos">
+            <input type="radio" name="tab" id="Habilidades">
+            <input type="radio" name="tab" id="Contacto">
+
+            <label for="home" class="home"><a href="#about"><i class="fas fa-user"></i>Sobre Mi</a></label>
+            <label for="Proyectos" class="Proyectos"><a href="#projects"><i class="far fa-comment"></i>Proyectos</a></label>
+            <label for="Habilidades" class="Habilidades"><a href="#skills"><i class="far fa-envelope"></i>Habilidades</a></label>
+            <label for="Contacto" class="Contacto"><a href="#contact"><i class="far fa-heart"></i>Contacto</a></label>
+            <div class="table"></div>
+
+        </nav>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="main.js"></script>
