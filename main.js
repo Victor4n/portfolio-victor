@@ -53,3 +53,30 @@ var tagcloud = TagCloud('.content', myTag, {
     direction: 135,
     keep: true
 });
+
+
+
+
+function irASeccion(idSeccion) {
+    const seccion = document.getElementById(idSeccion);
+    seccion.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+    });
+}
+
+document.getElementById('home').addEventListener('click', function() {
+    irASeccion('about');
+});
+
+document.getElementById('Proyectos').addEventListener('click', function() {
+    irASeccion('projects');
+});
+
+document.getElementById('Habilidades').addEventListener('click', function() {
+    irASeccion('skills');
+});
+
+document.getElementById('Contacto').addEventListener('click', function() {
+    irASeccion('contact');
+});

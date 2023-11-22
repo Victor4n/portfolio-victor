@@ -356,6 +356,7 @@ section{
   bottom: 0;
   position: fixed;
   left: 20%;
+  z-index: 1000;
 }
 
 .wrapper nav{
