@@ -59,10 +59,18 @@ var tagcloud = TagCloud('.content', myTag, {
 
 function irASeccion(idSeccion) {
     const seccion = document.getElementById(idSeccion);
-    seccion.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-    });
+
+    const options = {
+        behavior: 'smooth'
+    };
+
+    if (idSeccion === 'about') {
+        options.block = 'start';
+    } else {
+        options.block = 'center';
+    }
+
+    seccion.scrollIntoView(options);
 }
 
 document.getElementById('home').addEventListener('click', function() {
