@@ -15,7 +15,6 @@ const typed = new Typed('.typed', {
 if (window.innerWidth > 767) {
     iniciarTyped();
   }
-
 window.addEventListener("scroll", function () {
     var header = document.getElementById("headerSticky");
 
@@ -49,6 +48,7 @@ section.forEach(section =>{
 
 //Habilidades
 
+
 const myTag = ['HTML', 'CSS', 'JavaScript', 'React', 'Sass', 'Tailwind', 'Python', 'Git', 'SQL', 'NodeJS', 'BootStrap'];
 
 let tagcloud;
@@ -75,6 +75,15 @@ initTagCloud();
 window.addEventListener('resize', function() {
     tagcloud.destroy(); // Destruir la instancia existente
     initTagCloud(); // Volver a inicializar con el nuevo radio
+
+const myTag = ['HTML', 'CSS', 'JavaScript', 'React', 'NextJS', 'Redux', 'TypeScript', 'Python', 'Django', 'Express', 'NodeJS', 'BootStrap', 'MogoDB', 'JQuery', 'SCSS', 'PUG'];
+
+var tagcloud = TagCloud('.content', myTag, {
+    radius: 200,
+    maxSpeed: 'slow',
+    initSpeed: 'normal',
+    direction: 135,
+    keep: true
 });
 
 
@@ -111,3 +120,4 @@ document.getElementById('Habilidades').addEventListener('click', function() {
 document.getElementById('Contacto').addEventListener('click', function() {
     irASeccion('contact');
 });
+})
