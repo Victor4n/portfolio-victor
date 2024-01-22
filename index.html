@@ -10,13 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Montserrat:wght@500;600;700&family=Poppins:wght@200;300;400;500;600;700&family=Russo+One&family=Young+Serif&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
 </head>
 <body>
-
   <header id="headerSticky">
       <h1 class="V" id="headerTitle">V<span class="typed"></span></h1>
   </header>
-
   <section id="about">
       
       <div class="container-about">
@@ -29,9 +29,6 @@
             </div>
           <div class="enlaces">
             <a href="https://github.com/Victor4n" target="_blank"><i class='bx bxl-github'></i></a>
-
-          <a href="#"><i class='bx bxl-instagram' ></i></a>
-          <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
           </div>
           
           </div>
@@ -41,7 +38,6 @@
           
         </div>
   </section>
-
           <div class="slider">
               <div class="slider-track">
                   <div class="slide"><img src="src/html.png" width="50px"></img></div>
@@ -67,40 +63,30 @@
       </div>
       
       
-
   <hr class="separador">
   <section id="projects">
       <h2>Proyectos</h2>
-
         <a href="https://github.com/Victor4n" target="_blank" rel="noopener noreferrer">
             <img src="src/trabajo.png" alt="primerTrabajo"></a>
-
-          <img src="src/trabajo.png" alt="primerTrabajo">
-
           <p>Logitech - tienda de venta de computadoras</p>
           
   </section>
-
   <section id="skills">
       <div class="containerDescription">
           <h2>Habilidades</h2>
           <p>Poseo habilidades destacadas en la creación de páginas web, abarcando desde el desarrollo básico con HTML y CSS hasta la implementación dinámica con JavaScript. Mi experiencia se extiende al uso de tecnologías avanzadas como React, Node y npm, lo que me permite construir interfaces modernas y funcionales. Mi destreza en el diseño y la programación web me ha permitido llevar a cabo proyectos diversos y desafiantes. Conozco a fondo las herramientas esenciales para el desarrollo web y estoy constantemente ampliando mis conocimientos para mantenerme actualizado en este campo en constante evolución.</p>
       </div>
       <hr class="separadorSkills">
-
       <div class="skillsContainer">
         <div class="skillsRotate">
-            <span class="content"></span>
-        </div> 
-    </div>
-    
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 
-      <div class="skillsRotate">
-          <span class="content"></span>
-      </div>
+            <dotlottie-player src="https://lottie.host/75cb0b88-d36d-4cc8-8960-42248f687f7c/sRT6CgmskG.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></dotlottie-player>
+        </div>
+    </div>
+
 
   </section>
-
   <section id="contact">
       <div class="container">
           <div class="text">
@@ -146,26 +132,50 @@
       </form>
       
       <div class="formRow">
-
       </div>
   </section>
-  <div class="wrapper">
-      <nav>
-          <input type="radio" name="tab" id="home">
-          <input type="radio" name="tab" id="Proyectos">
-          <input type="radio" name="tab" id="Habilidades">
-          <input type="radio" name="tab" id="Contacto">
+<div class="wrapper">
+   <nav>
+      <a href="#about" class="nav-link">Sobre Mi</a>
+      <a href="#projects" class="nav-link">Proyectos</a>
+      <a href="#skills" class="nav-link">Habilidades</a>
+      <a href="#contact" class="nav-link">Contacto</a>
+      <div class="indicator"></div>
+   </nav>
+</div>
 
-          <label for="home" class="home"><a id="index"><i class="fas fa-user"></i>Sobre Mi</a></label>
-          <label for="Proyectos" class="Proyectos"><a id="index1"><i class="fas fa-laptop-code"></i>Proyectos</a></label>
-          <label for="Habilidades" class="Habilidades"><a id="index2"><i class="fas fa-code"></i>Habilidades</a></label>
-          <label for="Contacto" class="Contacto"><a id="index3"><i class="fas fa-envelope"></i>Contacto</a></label>
-          <div class="table"></div>
-
-      </nav>
-  </div>
   <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+
 </body>
-</html>
+
+</html> 

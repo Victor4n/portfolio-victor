@@ -15,6 +15,7 @@ const typed = new Typed('.typed', {
 if (window.innerWidth > 767) {
     iniciarTyped();
   }
+
 window.addEventListener("scroll", function () {
     var header = document.getElementById("headerSticky");
 
@@ -46,46 +47,6 @@ section.forEach(section =>{
 
 
 
-//Habilidades
-
-
-const myTag = ['HTML', 'CSS', 'JavaScript', 'React', 'Sass', 'Tailwind', 'Python', 'Git', 'SQL', 'NodeJS', 'BootStrap'];
-
-let tagcloud;
-
-function initTagCloud() {
-    tagcloud = TagCloud('.content', myTag, {
-        radius: calculateRadius(),
-        maxSpeed: 'slow',
-        initSpeed: 'normal',
-        direction: 135,
-        keep: true
-    });
-}
-
-function calculateRadius() {
-    // Puedes ajustar esta función según tus necesidades
-    return Math.min(window.innerWidth, window.innerHeight) * 0.4;
-}
-
-// Inicializar la nube de etiquetas cuando se carga la página
-initTagCloud();
-
-// Volver a calcular el radio y actualizar la nube cuando cambie el tamaño de la ventana
-window.addEventListener('resize', function() {
-    tagcloud.destroy(); // Destruir la instancia existente
-    initTagCloud(); // Volver a inicializar con el nuevo radio
-
-const myTag = ['HTML', 'CSS', 'JavaScript', 'React', 'NextJS', 'Redux', 'TypeScript', 'Python', 'Django', 'Express', 'NodeJS', 'BootStrap', 'MogoDB', 'JQuery', 'SCSS', 'PUG'];
-
-var tagcloud = TagCloud('.content', myTag, {
-    radius: 200,
-    maxSpeed: 'slow',
-    initSpeed: 'normal',
-    direction: 135,
-    keep: true
-});
-
 
 
 
@@ -105,19 +66,3 @@ function irASeccion(idSeccion) {
     seccion.scrollIntoView(options);
 }
 
-document.getElementById('home').addEventListener('click', function() {
-    irASeccion('about');
-});
-
-document.getElementById('Proyectos').addEventListener('click', function() {
-    irASeccion('projects');
-});
-
-document.getElementById('Habilidades').addEventListener('click', function() {
-    irASeccion('skills');
-});
-
-document.getElementById('Contacto').addEventListener('click', function() {
-    irASeccion('contact');
-});
-})
